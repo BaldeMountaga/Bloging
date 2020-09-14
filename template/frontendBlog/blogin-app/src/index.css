@@ -1,0 +1,94 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 20px;
+  font-size: 40px;
+  text-align: center;
+  background-color: #203040;
+  color: #ffffff;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+  padding: 10px;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+  padding: 10px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+  height:200px
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white; 
+   padding: 20px;
+   margin-top: 20px;
+   border-radius: 7px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+.card-footer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.card-child1{
+  padding-right: 50px;
+}
+.card-child2{
+  padding-right: 20px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+/* .footer {
+  padding: 30px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+} */
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+.footer{
+  grid-area: footer;
+  background-color: #203040;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}

@@ -1,23 +1,27 @@
-import React, { useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import './App.css';
-import Login from './component/Login';
+import React from 'react';
+import { Route, Switch, BrowserRouter} from 'react-router-dom';
+import LoginPage from './component/LoginPage';
 import Register from './component/Register';
 import HomePage from './component/HomePage'
-import Error from './component/Error'
 
   
-const App = (props) => {
+function App (){
+
   return (
-    <div>
-       <Switch>
-         <Route exact path="/" component={HomePage} />
-         <Route exact path="/Login" component={Login} />
-         <Route exact path="/Register" component={Register} />
-         <Route component={Error} />
-       </Switch>
+   <div>
+     <BrowserRouter>
+        {/* <Link to='/'> Home </Link>
+        <Link to='/register'> Register </Link>
+        <Link to='/login'> Log In </Link> */}
+
+        <Switch>
+          <Route exact path='/' component={ HomePage }/>
+          <Route exact path='/register' component={ Register} />
+          <Route exact path='/login' component={ LoginPage } />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
 
-export default App;
+export default App; 

@@ -30,26 +30,26 @@ body {
 /* Right column */
 .rightcolumn {
   float: left;
-  width: 25%;
-  padding-left: 20px;
+  width: 24%;
+  padding-left: 0px;
   padding: 10px;
 }
 
 /* Fake image */
 .fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-  height:200px
+  background-color: #333;
+  max-width: 100%;
+  height: auto;
 }
+
 
 /* Add a card effect for articles */
 .card {
    background-color: white; 
    padding: 20px;
    margin-top: 20px;
-   border-radius: 7px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+   border-radius: 20px;
+   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
 }
 .card-footer{
   display: flex;
@@ -69,14 +69,6 @@ body {
   clear: both;
 }
 
-/* Footer */
-/* .footer {
-  padding: 30px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-} */
-
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
     width: 100%;
@@ -87,8 +79,23 @@ body {
   grid-area: footer;
   background-color: #203040;
   color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex;
+  align-items:flex-end; */
   padding: 30px;
+  /* height: 470px; */
+}
+
+/* Nava links*/
+.links{
+  padding-right: 20px;
+  color: #ffffff;
+}
+.links:hover{
+  color: pink;
+}
+
+.media{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import  popular from  './Images/popular post1.jpg';
-import vitamin from './Images/vitamin.jpg';
-import api from'./Images/api.jpg';
+import  Nasa from  './Images/Nasa.jpg';
+import coronavirus from './Images/coronavirus.jpg';
+import amazon from './Images/amazon.png';
 
 
 import {
@@ -19,18 +19,18 @@ import { FaFacebook } from "react-icons/fa";
 
 function HomePage(props) {
 
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
   
-  function increment(){
-    setCount(count + 1);
-  }
+  // function increment(){
+  //   setCount(count + 1);
+  // }
 
-  function decrement(){
-    setCount(count - 1);
-  }
+  // function decrement(){
+  //   setCount(count - 1);
+  // }
     
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
 
   return (
       <div>
@@ -40,11 +40,11 @@ function HomePage(props) {
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                   <Nav className="ml-auto" navbar>
-                    <NavItem className="links">
-                     <Link to="./LoginPage">Log In</Link>
+                    <NavItem className="mr-4 ">
+                     <Link className="text-white" to="./LoginPage">Log In</Link>
                     </NavItem>
-                    <NavItem className="links">
-                      <Link to="./Register">Register</Link>
+                    <NavItem className="mr-2 text-white">
+                      <Link className="text-white" to="./Register">Register</Link>
                     </NavItem>
                   </Nav>
                 </Collapse>
@@ -126,14 +126,14 @@ function HomePage(props) {
               <div className="rightcolumn">
                 <div className="card">
                   <h3>Popular Post</h3>
-                  <div className="fakeimg">
-                    <img src={ vitamin } alt="Research looking throug" />
+                  <div>
+                    <img src={ coronavirus } alt="Research looking throug" class="img-fluid"/>
                     <p><a href="/">Best Evidence Yet That Vitamin D Reduces Covid-19 Risk</a></p>
                   </div><br/>
-                  <div className="fakeimg"><img src={ api } alt="Research looking throug" />
+                  <div><img src={ amazon } alt="Research looking throug" class="img-fluid" />
                   <p><a  href="https://rapidapi.com/?utm_source=google&utm_medium=cpc&utm_campaign=smart-display&utm_content=none&gclid=EAIaIQobChMIp-zcgrvr6wIVhqh7Ch1MMgZqEAEYASAAEgKVxvD_BwE">
                     World's Best API Marketplace</a></p></div><br/>
-                  <div className="fakeimg"><img src={ popular } alt="Popular post" />
+                  <div><img src={ Nasa } alt="Popular post" class="img-fluid"/>
                   <p><a href="https://edition.cnn.com/2020/09/14/politics/terry-branstad-china-intl-hnk/index.html">US ambassador in Beigin resign due to tension between China and US</a></p>
                   </div>
                 </div>

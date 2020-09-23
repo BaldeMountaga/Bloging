@@ -3,6 +3,7 @@ import React from 'react';
 const myStyle ={
   marginBottom: '15px'
 }
+
 function Register(props) {
   
   // Get the modal
@@ -14,10 +15,9 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-    return (
-        <div>
-               
-            <h2>Registration Form</h2>
+return (
+    <div>
+      <h2>Registration Form</h2>
 
             <button onclick="document.getElementById('id01').style.display='block'" style={{width:"auto"}}>Sign Up</button>
 

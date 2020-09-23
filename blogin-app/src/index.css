@@ -20,16 +20,9 @@ body {
 /* Right column */
 .rightcolumn {
   float: left;
-  width: 24%;
+  width: 25%;
   /* padding-left: 0px; */
   padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
 }
 
 /* Add a card effect for articles */
@@ -100,7 +93,7 @@ body {
     padding: 0;
   }
   .rightcolumn{
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -131,18 +124,6 @@ body {
   justify-content: flex-end;
   padding: 7px 20px ;
   font-size: 18px;
-}
-
-
-
-
-/* Nava links*/
-.links{
-  padding-right: 20px;
-  color: #ffffff;
-}
-.links:hover{
-  color: pink;
 }
 
 /* Subcribe form*/

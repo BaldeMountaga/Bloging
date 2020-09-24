@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import  Nasa from  './Images/Nasa.jpg';
 import coronavirus from './Images/coronavirus.jpg';
 import amazon from './Images/amazon.png';
+import logo from './Images/logo.jpg'
 
 
 import {
@@ -36,7 +37,7 @@ function HomePage(props) {
       <div>
         <div>
             <Navbar  color="dark" dark expand="md" >
-              <NavbarBrand className="brand" href="/">Scientist Blog</NavbarBrand>
+              <NavbarBrand className="brand" src={logo}>Scientist Blog</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                   <Nav className="ml-auto" navbar>

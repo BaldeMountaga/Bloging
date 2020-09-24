@@ -6,25 +6,25 @@ const myStyle ={
 
 function Register(props) {
   
-  // Get the modal
-var modal = document.getElementById('id01');
+//   // Get the modal
+// var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-}
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//   if (event.target === modal) {
+//     modal.style.display = "none";
+//   }
+// }
 return (
     <div>
       <h2>Registration Form</h2>
 
-            <button onclick="document.getElementById('id01').style.display='block'" style={{width:"auto"}}>Sign Up</button>
+            <button onClick="document.getElementById('id01').style.display='block'" style={{width:"auto"}}>Sign Up</button>
 
             <div id="id01" class="modal">
-              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-              <form class="modal-content" action="/action_page.php">
-                <div class="container">
+              <span onClick="document.getElementById('id01').style.display='none'" className="close" title="Close Modal">&times;</span>
+              <form className="modal-content">
+                <div className="container">
                   <h1>Sign Up</h1>
                   <p>Please fill in this form to create an account.</p>
                   <hr/>
@@ -43,7 +43,7 @@ return (
 
                   <p>By creating an account you agree to our <a href="/" style={{color:"dodgerblue"}}>Terms & Privacy</a>.</p>
 
-                  <div class="clearfix">
+                  <div className="clearfix">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
                     <button type="submit" class="signupbtn">Sign Up</button>
                   </div>

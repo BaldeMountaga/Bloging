@@ -1,5 +1,7 @@
 const express = require('express');
+const data = require('../models/data');
 const blogPosts = require('./db.json');   //Blog Database
+const { post } = require('./userRouter');
 const postsRouter = require.Router();
 
 
@@ -21,15 +23,26 @@ postsRouter.get('/posts/id:', (req, res) => {
 
 postsRouter.get('/new-blog-entry', (req, res) => {
     const body = req.body;
-    const id = uuid();
+    const id = uuid();  //chech about the uuid...
     const newBlogPost = {...body, id};
 
     blogPosts.push(newBlogPost);
     res.sendStatus(200);
 })
 
+//Update
+postsRouter.put('/:id', (req, res) => {
+   
+})
+
+// Create a blog
+postsRouter.post('/', (req, res) => {
+
+})
+
+//Delete
+postRouter.delete('/', (req, res) => {
+
+})
+
 module.exports = postRouter;
-
-
-
-//I need to implement the post/Edit/delete/

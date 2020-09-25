@@ -128,13 +128,13 @@ function HomePage(props) {
                 <div className="card">
                   <h3>Popular Post</h3>
                   <div>
-                    <img src={ coronavirus } alt="Research looking throug" class="img-fluid"/>
+                    <img src={ coronavirus } alt="Research looking throug" className="img-fluid"/>
                     <p><a href="/">Best Evidence Yet That Vitamin D Reduces Covid-19 Risk</a></p>
                   </div><br/>
-                  <div><img src={ amazon } alt="Research looking throug" class="img-fluid" />
+                  <div><img src={ amazon } alt="Research looking throug" className="img-fluid" />
                   <p><a  href="https://rapidapi.com/?utm_source=google&utm_medium=cpc&utm_campaign=smart-display&utm_content=none&gclid=EAIaIQobChMIp-zcgrvr6wIVhqh7Ch1MMgZqEAEYASAAEgKVxvD_BwE">
                     World's Best API Marketplace</a></p></div><br/>
-                  <div><img src={ Nasa } alt="Popular post" class="img-fluid"/>
+                  <div><img src={ Nasa } alt="Popular post" className="img-fluid"/>
                   <p><a href="https://edition.cnn.com/2020/09/14/politics/terry-branstad-china-intl-hnk/index.html">US ambassador in Beigin resign due to tension between China and US</a></p>
                   </div>
                 </div>
@@ -151,7 +151,7 @@ function HomePage(props) {
 
             <div className="footer" >
               <form className="form-subscription">
-                <div class="container">
+                <div className="container">
                   <h2>Subscribe to our Newsletter</h2>
                   <p>Lorem ipsum text about why you should subscribe to our newsletter blabla. Lorem ipsum text about why you should subscribe to our newsletter blabla.</p>
                 </div>
@@ -159,12 +159,12 @@ function HomePage(props) {
                 <div className="container">
                   <input type="text" placeholder="Name" name="name" required />
                   <input type="text" placeholder="Email address" name="mail" required />
-                  <label for="daily" className="chbox">
+                  <label htmlFor="daily" className="chbox">
                     <input type="checkbox" id="daily" name="subscribe" /> Daily Newsletter
                   </label>
                 </div>
-                <div class="container">
-                  <input  type="submit" value="Subscribe" />
+                <div className="container">
+                  <input type="submit" value="Subscribe" />
                 </div>
               </form>
               <div className="right"> @2020 All right reserved.</div>

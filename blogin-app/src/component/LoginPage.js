@@ -1,37 +1,39 @@
 import React from 'react';
-//import HomePage from './HomePage';
 import './Login.css';
+import { FcManager } from "react-icons/fc";
+
 
 const myStyle ={
     backgroundColor: '#f1f1f1'
 }
+
 function LoginPage(props) {
 
     return (
         <div>
-            <h2>Login Form</h2>
+            <h2 className="text-center">Login Form</h2>
     
             <form>
                 <div className="imgcontainer">
-                    <img src="img_avatar2.png" alt="Avatar" class="avatar" />
+                    <FcManager size={100}/>
                 </div>
                 
-                <div className="container">
-                    <label for="uname"><b>Username</b></label>
+                <div className="main">
+                    <label htmlFor="uname"><b>Username</b></label>
                     <input type="text" placeholder="Enter Username" name="uname" required />
                     
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required />
+                    <label htmlFor="pw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="pw" required />
                     
-                    <button type="submit">Login</button>
+                    <button className="btn btn-success p-2" type="submit">Login</button>
                     <label>
-                        <input type="checkbox" checked="checked" name="remember" /> Remember me
+                        <input type="checkbox" name="remember" /> Remember me
                     </label>
                 </div>
                 
-                <div className="container" style={myStyle}>
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="/">password?</a></span>
+                <div className="footer" style={myStyle}>
+                    <button type="button" className="text-center btn-danger rounded p-2 mr-1">Cancel</button>
+                    <span className="d-flex "><b className="mr-2">Forgot</b> <a href="/">password?</a></span>
                 </div>
             </form>
     

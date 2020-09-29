@@ -64,19 +64,29 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  height: 40px;
+  float: right;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
 }
-.card-child1{
+
+.btn1-style{
   color: #62a4da;
+  background-color: #f8f8f8;
   padding-right: 50px;
+  height: 20px;
+  padding-top: 0px;
 }
-.card-child1:hover{
+.btn1-style:hover{
   color: #61c0d8;
 }
-.card-child2{
+.btn2-style{
   color: #62a4da;
+  background-color: #f8f8f8;
   padding-right: 20px;
+  height: 20px;
+  padding-top: 0px;
 }
-.card-child2:hover{
+.btn2-style:hover{
   color: #61c0d8;
 }
 
@@ -101,16 +111,17 @@ body {
 .footer{
   padding: 20px;
   text-align: center;
-  background: #203040;
-  /* background: #ddd; */
+  background: #ddd; 
   color: #ffffff;
   margin-top: 20px;
-}
+  background-color: 	#336699;
+} 
 .chbox{
   float: left;
 }
 .form-subscription{
-  border-color:  #203040;
+  border-color: 	#3e5f81;
+  color: #ffffff;
 }
 /*Sicial media*/
 .media{
@@ -122,8 +133,12 @@ body {
 .right{
   display: flex;
   justify-content: flex-end;
+  text-align: center;
   padding: 7px 20px ;
+  height: 45px;
   font-size: 18px;
+  color: #ffffff;
+  background-color: 	#336699
 }
 
 /* Subcribe form*/
@@ -147,7 +162,7 @@ input[type=checkbox] {
 }
 
 input[type=submit] {
-  background-color: #494D5F;
+  background-color: #359c9c;
   color: white;
   border: none;
 }
@@ -170,7 +185,7 @@ input[type=submit]:hover {
   width: 15em;
 }
 .button1{
-  background-color: #f8f8f8;
+ background-color: #f8f8f8;
  color: #62a4da;
  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
  margin-right: 10px;
@@ -203,10 +218,8 @@ input[type=submit]:hover {
   background-color: #f8f8f8;
   color: #62a4da;
  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
- /* border: 1px solid #ccc; */
 }
 .button3:hover{
-  /* color: #404040 !important; */
   color: #db1919 !important;
   font-weight: 700 !important;
   letter-spacing: 3px;
@@ -217,5 +230,4 @@ input[type=submit]:hover {
 }
 h6{
   padding-top: 0.5em;
-  /* add some colors on this paragraph*/
 }

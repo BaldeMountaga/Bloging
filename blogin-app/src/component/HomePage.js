@@ -15,21 +15,21 @@ import {
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
-import { AiOutlineTwitter, AiFillLinkedin, AiFillEye, AiFillLike } from "react-icons/ai";
+import { AiOutlineTwitter, AiFillLinkedin, AiFillLike, AiFillDislike} from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 
 function HomePage(props) {
 
-  // const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
   
-  // function increment(){
-  //   setCount(count + 1);
-  // }
-
-  // function decrement(){
-  //   setCount(count - 1);
-  // }
+  const increment = () =>{
+    setCount(count + 1);
+  }
     
+  const decrement = () =>{
+    setCount(count - 1);
+  }
+
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
@@ -42,7 +42,7 @@ function HomePage(props) {
                 <Collapse isOpen={isOpen} navbar>
                   <Nav className="ml-auto" navbar>
                     <NavItem className="mr-4 ">
-                     <Link className="text-white" to="./LoginPage">Log In</Link>
+                     <Link className=" text-white " to="./LoginPage">Log In</Link>
                     </NavItem>
                     <NavItem className="mr-2 text-white">
                       <Link className="text-white" to="./Register">Register</Link>
@@ -62,8 +62,8 @@ function HomePage(props) {
                       if this was true. However, despite many suggestive pieces of evidence, confirmation has been hard to find.
                     </p>
                     <div className="card-footer">
-                      <div className="card-child1"><strong>107</strong><AiFillLike size={25}/></div>
-                      <div className="card-child2"><strong>40</strong><AiFillEye size={25}/></div>
+                      <div><button className="btn1-style" onClick={increment}><strong>0</strong><AiFillLike size={25}/></button></div>
+                      <div><button className="btn2-style" onClick={decrement}><strong>0</strong><AiFillDislike size={25}/></button></div>
                     </div>
                     <div>
                         <h6>Comment</h6>
@@ -85,8 +85,8 @@ function HomePage(props) {
                       from Earth and from Space. The newly upgraded GREGOR telescope has just added to these with a fantastic contribution.
                     </p>
                     <div className="card-footer">
-                      <div className="card-child1"><strong>107</strong><AiFillLike size={25}/></div>
-                      <div className="card-child2"><strong>90</strong><AiFillEye size={25}/></div>
+                      <div><button className="btn1-style" onClick={increment}><strong>0</strong><AiFillLike size={25}/></button></div>
+                      <div><button className="btn2-style" onClick={decrement}><strong>0</strong><AiFillDislike size={25}/></button></div>
                     </div>
                     <div>
                         <h6>Comment</h6>
@@ -108,8 +108,8 @@ function HomePage(props) {
                       where PLANS for its transition are created and organized.
                     </p>
                     <div className="card-footer">
-                      <div className="card-child1"><strong>30</strong><AiFillLike size={25}/></div>
-                      <div className="card-child2"><strong>50</strong><AiFillEye size={25}/></div>
+                      <div><button className="btn1-style" onClick={increment}><strong>0</strong><AiFillLike size={25}/></button></div>
+                      <div><button className="btn2-style" onClick={decrement}><strong>0</strong><AiFillDislike size={25}/></button></div>
                     </div>
                     <div>
                         <h6>Comment</h6>
@@ -153,7 +153,7 @@ function HomePage(props) {
               <form className="form-subscription">
                 <div className="container">
                   <h2>Subscribe to our Newsletter</h2>
-                  <p>Lorem ipsum text about why you should subscribe to our newsletter blabla. Lorem ipsum text about why you should subscribe to our newsletter blabla.</p>
+                  <p>Get the latest news from scientist blog in your imbox each week</p>
                 </div>
 
                 <div className="container">
@@ -167,8 +167,8 @@ function HomePage(props) {
                   <input type="submit" value="Subscribe" />
                 </div>
               </form>
-              <div className="right"> @2020 All right reserved.</div>
             </div>
+            <div className="right"> @2020 All right reserved.</div>
         </div>
     );
 }

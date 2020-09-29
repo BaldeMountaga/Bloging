@@ -6,12 +6,14 @@ const cors = require('cors');
 const postsRouter = require('./postsRouter');
 const userRouter = require('./postsRouter');
 require('dotenv').config();
-
+const articlesRouter = require('./Articles')
 
 app.use(express.static('build'));
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use(session({ secret: 'LightBlog', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false }));
+
 
 const MongoConfig = {
     useUnifiedTopology: true,
@@ -38,11 +40,10 @@ app.use('/', (req, res, next) => {
 
 app.use('/posts', postsRouter);
 app.use('/user', userRouter);
-
+app.use('/api/article', articlesRouter);
 
 app.listen(process.env.PORT, () => {
     console.log('App is running ');
 })
-
 
 module.exports = app;

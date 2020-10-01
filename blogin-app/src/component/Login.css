@@ -9,6 +9,7 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    border-radius: 50px;
 }
 
 input[type=password]{
@@ -32,6 +33,7 @@ input[type=password]{
     display: flex;
     align-items: center;
     color: black;
+    margin: 15px;
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -39,8 +41,5 @@ input[type=password]{
     span.pw {
         display: block;
         float: none;
-    }
-    .cbtn {
-        width: 100%;
     }
 } 

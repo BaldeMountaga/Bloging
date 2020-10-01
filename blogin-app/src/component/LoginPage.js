@@ -25,14 +25,14 @@ function LoginPage(props) {
                     <label htmlFor="pw"><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="pw" required />
                     
-                    <button className="btn btn-success p-2" type="submit">Login</button>
+                    <button className="btn btn-success p-2 sub" type="submit">Login</button>
                     <label>
                         <input type="checkbox" name="remember" /> Remember me
                     </label>
                 </div>
                 
                 <div className="footer" style={myStyle}>
-                    <button type="button" className="text-center btn-danger rounded p-2 mr-1">Cancel</button>
+                    <button type="button" className="text-center btn-danger rounded p-2 mr-1 cbtn">Cancel</button>
                     <span className="d-flex "><b className="mr-2">Forgot</b> <a href="/">password?</a></span>
                 </div>
             </form>

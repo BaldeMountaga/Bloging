@@ -126,10 +126,10 @@ function HomePage() {
                         <p>Your email address will not be published. Required fields are marked *</p>
                         <h6>Comment</h6>
                         <textarea className="comment" rows="4" cols="65" type="textarea"  placeholder="Add your comment" name="name" required />
-                        <label htmFor="name" className="name-input">Name<supr> *</supr></label>
+                        <label htmlFor="name" className="name-input">Name *</label>
                         <input type="text" id="name" required/>
 
-                        <label htmFor="name" className="name-input">Email<supr> *</supr></label>
+                        <label htmlFor="name" className="name-input">Email * </label>
                         <input type="text" id="name" required/>
 
                         <label htmlFor="daily" className="chbox">

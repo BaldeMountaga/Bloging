@@ -5,6 +5,7 @@ const { response } = require('../app');
 const userRouter = express.Router();
 const emptyField = require('../utils').emptyField;
 const jwt = require ('jsonwebtoken');
+const { getAuthToken } = require('../utils');
 
 // utils.js
 
@@ -103,6 +104,28 @@ userRouter.post('/login', async(request, response) =>{
             response.status(401).send({password: 'Password mismatch'});
         }
     })
+})
+
+
+/**
+ * Return a given user, given auth token in the request header
+ */
+userRouter.get('/get-user', async(request, response)=> {
+    const token = getAuthToken(request);
+    try {
+        const decryptedToken = jwt.verify(token, config.JWT_SECRET);
+        if (!token && !decryptedToken) {
+            response.send(401).send({error: statusMessages.NOT_AUTHORIZED_401});
+        }
+        const user = await User.findById(decryptedToken.id);
+        response.status(200).send({
+            firstName: user.firstName,
+            lastName: user.lastName,
+            email: user.email
+        })
+    } catch(exception) {
+        response.status(500).send({error: statusMessages.SERVER_ERROR_500});
+    }
 })
 
 

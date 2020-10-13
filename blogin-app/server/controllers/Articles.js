@@ -34,23 +34,23 @@ articleRouter.get('/:id', async (req, res, next) =>{
 //   author
 // }
 
-if(!emptyField(userData)) {
-    const user = new User(request.body);
-    user.passwordHash = bcrypt.hashSync(request.body.password, 10);
-    // bcrypt.compareSync(password, hash)
+// if(!emptyField(userData)) {
+//     const user = new User(request.body);
+//     user.passwordHash = bcrypt.hashSync(request.body.password, 10);
+//     // bcrypt.compareSync(password, hash)
 
-    console.log(user.passwordHash);
+//     console.log(user.passwordHash);
 
-    try {
-        await user.save();
-        response.status(201).send({status: statusMessages.CREATED_201})
-    } catch (error) {
-        response.status(500).json({error: statusMessages.SERVER_ERROR_500})
-    }
+//     try {
+//         await user.save();
+//         response.status(201).send({status: statusMessages.CREATED_201})
+//     } catch (error) {
+//         response.status(500).json({error: statusMessages.SERVER_ERROR_500})
+//     }
 
-}else {
-    console.log(emptyField(userData));
-}
+// }else {
+//     console.log(emptyField(userData));
+// }
 
 //Edit or update
 articleRouter.put('/:id', (req, res, next) => {

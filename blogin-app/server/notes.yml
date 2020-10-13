@@ -1,0 +1,17 @@
+# Notes for backend code.
+
+- Changes made to the backend:
+  - File:
+    - utils.js:
+      - Fixed bug in emtpyField function.
+      - Add getAuthToken function for getting token from requests.
+    - userRouter.js:
+      - Added get-user Route to get user-info information given token.:
+        - Operation:
+          - Get the auth token.
+          - Validate the token:
+            - If Token is valid:
+                - Find the user with the id in the token
+            - if Token is not valid:
+                - return a not authorized error;
+
